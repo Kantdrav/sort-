@@ -1,0 +1,17 @@
+def solution(L):
+    ### Enter your solution below this line
+    ### Indent your entire code by one unit (4 spaces) to the right
+    for i in range(len(L)):
+        min =i
+        for j in range(i+1,len(L)):
+            if L[j] < L[min]:
+                min =j
+        t=L[i]
+        L[i]=L[min]
+        L[min]=t
+    sorted_L=L[::-1]
+        
+        
+    
+    ### Enter your solution above this line
+    return sorted_L
